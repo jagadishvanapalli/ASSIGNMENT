@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Web Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    /* Reset default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Style for the navigation bar */
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+    position: fixed; /* Fixed position to stay at the top */
+    width: 100%; /* Take up the full width */
+    z-index: 1000; /* Set a high z-index to ensure it's on top */
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navbar li {
+    float: left;
+}
+
+.navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Style for the dropdown menu */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content li {
+    float: none;
+}
+
+.dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Style for other sections below the navigation bar */
+.section {
+    margin-top: 60px; /* Adjust this value to give space for the fixed navbar */
+    /* Add other styles for your sections as needed */
+}
+
+</style>
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">home</a></li>
+            <li class="dropdown">
+                <a href="#">Dropdown</a>
+            <div class="submenu">
+                <ul class="dropdown-content">
+                    <li><a href="#">Item 1</a></li>
+                    <li><a href="#">Item 2</a></li>
+                    <li><a href="#">Item 3</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Other sections below the navigation bar -->
+    <section class="section">
+        <!-- Content of the section -->
+    </section>
+
+    <!-- Add more sections as needed -->
+
+    <script src="script.js"></script>
+</body>
+</html>
